@@ -1,2 +1,2 @@
-# online-mobile-shopping
-A website for mobile shopping created using MERN stack.
+# SmartShop Mobile Shopping
+A web-app for mobile shopping created using MERN stack.

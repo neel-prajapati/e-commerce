@@ -1,12 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productAction';
 
 function HomeScreen(props)
 {
-    
     const productList = useSelector(state=>state.productList);
     const {products, loading, error} = productList;
     const dispatch = useDispatch();
@@ -17,6 +15,7 @@ function HomeScreen(props)
         return () => {
             //
         };
+        // eslint-disable-next-line
     }, [])
     return loading?<div>Loading...</div>:
 error?<div>Error: {error}</div>:
@@ -30,12 +29,11 @@ error?<div>Error: {error}</div>:
                 <Link to={'/product/'+product._id}>{product.name}</Link>
                 </div>
             <div className="product-brand">{product.brand}</div>
-<div className="product-price">{product.price}</div>
+<div className="product-price">₹{product.price}</div>
 <div className="product-ratings">{product.rating} Star ({product.numReviews} Reviews)</div>
         </div>
     </li>
-
-            )
+)
     }
     
 </ul>

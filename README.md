@@ -1,2 +1,5 @@
 # SmartShop Mobile Shopping
-A web-app for mobile shopping created using MERN stack.
+The website has been created using the following technologies:
+1. HTML, CSS, JavaScript
+2. ReactJs, Redux
+3. NodeJs, ExpressJs, Mongoose
